@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Boyfriend?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    #container {
+      max-width: 600px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+    }
+
+    #noBtn {
+      background-color: #ddd;
+      color: #777;
+      border: none;
+      border-radius: 4px;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Will You Be My Boyfriend?</h1>
+    <button id="yesBtn" onclick="showMessage('Yes')">Yes</button>
+    <button id="noBtn" onclick="showMessage('No')" disabled>No</button>
+    <p id="resultMessage"></p>
+  </div>
+
+  <script>
+    function showMessage(answer) {
+      const resultMessage = document.getElementById('resultMessage');
+      resultMessage.textContent = `You chose: ${answer}`;
+    }
+  </script>
+</body>
+</html>
